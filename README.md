@@ -2,13 +2,13 @@
 
 Dark and light themes based on GNOME 42's new Adwaita look and GNOME Builder's syntax highlighting.
 
-<img src="assets/screenshot.png">
+![Screenshot showing dark and light themes](assets/screenshot.png)
 <small><center>Fonts shown: JetBrains Mono, SF Pro Text.</center></small>
 <br>
 
 Extra variants are included for those who prefer a colorful status bar and/or default syntax highlighting:
 
-<img src="assets/screenshot_extra.png"><br>
+![Screenshot showing extra theme variations](assets/screenshot_extra.png)<br>
 
 ## Suggested settings
 
