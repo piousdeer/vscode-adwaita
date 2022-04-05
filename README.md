@@ -3,7 +3,7 @@
 Dark and light themes based on GNOME 42's new Adwaita look and GNOME Builder's syntax highlighting.
 
 <img src="assets/screenshot.png">
-<font color="#777"><small><center>Fonts shown: JetBrains Mono, SF Pro Text</center></small></font>
+<small><center>Fonts shown: JetBrains Mono, SF Pro Text.</center></small>
 <br>
 
 Extra variants are included for those who prefer a colorful status bar and/or default syntax highlighting:
@@ -16,7 +16,7 @@ Installing [adw-gtk3](https://github.com/lassekongo83/adw-gtk3) will get you a m
 
 Open Command Palette and find "Open Settings (JSON)". Here are the recommended settings:
 
-```json
+```jsonc
 "workbench.preferredDarkColorTheme": "Adwaita Dark",
 "workbench.preferredLightColorTheme": "Adwaita Light",
 "window.titleBarStyle": "native",
