@@ -10,6 +10,10 @@ Extra variants are included for those who prefer a colorful status bar and/or de
 
 ![Screenshot showing extra theme variations](assets/screenshot_extra.png)<br>
 
+## Installation
+
+Get it on [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=piousdeer.adwaita-theme) or [Open VSX](https://open-vsx.org/extension/piousdeer/adwaita-theme).
+
 ## Suggested settings
 
 Installing [adw-gtk3](https://github.com/lassekongo83/adw-gtk3) will get you a matching native title bar.
