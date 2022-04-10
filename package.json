@@ -1,71 +1,77 @@
 {
-  "name": "adwaita-theme",
-  "icon": "assets/icon.png",
-  "displayName": "Adwaita",
-  "description": "Theme for the GNOME desktop",
-  "version": "1.0.2",
-  "publisher": "piousdeer",
-  "license": "GPL-3.0-only",
-  "engines": {
-    "vscode": "^1.65.0"
-  },
-  "categories": [
-    "Themes"
-  ],
-  "keywords": [
-    "gnome",
-    "libadwaita"
-  ],
-  "homepage": "https://github.com/piousdeer/vscode-adwaita",
-  "bugs": {
-    "url": "https://github.com/piousdeer/vscode-adwaita/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/piousdeer/vscode-adwaita.git"
-  },
-  "contributes": {
-    "themes": [
-      {
-        "label": "Adwaita Dark",
-        "uiTheme": "vs-dark",
-        "path": "./themes/adwaita-dark.json"
-      },
-      {
-        "label": "Adwaita Dark & colorful status bar",
-        "uiTheme": "vs-dark",
-        "path": "./themes/adwaita-dark-colorful-status-bar.json"
-      },
-      {
-        "label": "Adwaita Dark & default syntax highlighting",
-        "uiTheme": "vs-dark",
-        "path": "./themes/adwaita-dark-default-syntax-highlighting.json"
-      },
-      {
-        "label": "Adwaita Dark & default syntax highlighting & colorful status bar",
-        "uiTheme": "vs-dark",
-        "path": "./themes/adwaita-dark-default-syntax-highlighting-colorful-status-bar.json"
-      },
-      {
-        "label": "Adwaita Light",
-        "uiTheme": "vs",
-        "path": "./themes/adwaita-light.json"
-      },
-      {
-        "label": "Adwaita Light & colorful status bar",
-        "uiTheme": "vs",
-        "path": "./themes/adwaita-light-colorful-status-bar.json"
-      },
-      {
-        "label": "Adwaita Light & default syntax highlighting",
-        "uiTheme": "vs",
-        "path": "./themes/adwaita-light-default-syntax-highlighting.json"
-      },
-      {
-        "label": "Adwaita Light & default syntax highlighting & colorful status bar",
-        "uiTheme": "vs",
-        "path": "./themes/adwaita-light-default-syntax-highlighting-colorful-status-bar.json"
-      }
-    ]
-  }
+	"name": "adwaita-theme",
+	"icon": "assets/icon.png",
+	"displayName": "Adwaita",
+	"description": "Theme for the GNOME desktop",
+	"version": "1.0.2",
+	"publisher": "piousdeer",
+	"license": "GPL-3.0-only",
+	"engines": {
+		"vscode": "^1.65.0"
+	},
+	"categories": [
+		"Themes"
+	],
+	"keywords": [
+		"gnome",
+		"libadwaita"
+	],
+	"homepage": "https://github.com/piousdeer/vscode-adwaita",
+	"bugs": {
+		"url": "https://github.com/piousdeer/vscode-adwaita/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/piousdeer/vscode-adwaita.git"
+	},
+	"contributes": {
+		"themes": [
+			{
+				"label": "Adwaita Dark",
+				"uiTheme": "vs-dark",
+				"path": "./themes/adwaita-dark.json"
+			},
+			{
+				"label": "Adwaita Dark & colorful status bar",
+				"uiTheme": "vs-dark",
+				"path": "./themes/adwaita-dark-colorful-status-bar.json"
+			},
+			{
+				"label": "Adwaita Dark & default syntax highlighting",
+				"uiTheme": "vs-dark",
+				"path": "./themes/adwaita-dark-default-syntax-highlighting.json"
+			},
+			{
+				"label": "Adwaita Dark & default syntax highlighting & colorful status bar",
+				"uiTheme": "vs-dark",
+				"path": "./themes/adwaita-dark-default-syntax-highlighting-colorful-status-bar.json"
+			},
+			{
+				"label": "Adwaita Light",
+				"uiTheme": "vs",
+				"path": "./themes/adwaita-light.json"
+			},
+			{
+				"label": "Adwaita Light & colorful status bar",
+				"uiTheme": "vs",
+				"path": "./themes/adwaita-light-colorful-status-bar.json"
+			},
+			{
+				"label": "Adwaita Light & default syntax highlighting",
+				"uiTheme": "vs",
+				"path": "./themes/adwaita-light-default-syntax-highlighting.json"
+			},
+			{
+				"label": "Adwaita Light & default syntax highlighting & colorful status bar",
+				"uiTheme": "vs",
+				"path": "./themes/adwaita-light-default-syntax-highlighting-colorful-status-bar.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "93fbc635-4a9a-4ff1-88ba-bf017484c602",
+		"publisherDisplayName": null,
+		"publisherId": "93befe42-7314-4d14-8724-19419a27ed64",
+		"isPreReleaseVersion": false
+	}
 }
