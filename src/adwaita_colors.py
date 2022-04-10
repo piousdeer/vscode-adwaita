@@ -121,10 +121,12 @@ MAP = {
         'constant.character.entity',
         # ${} (in e.g. JS)
         'punctuation.definition.template-expression',
-        # Nix
+        # Nix, Svelte
         # In JSX these scopes match {} in <a b={...}>, not what we want
         'punctuation.section.embedded.begin.nix',  # ${
-        'punctuation.section.embedded.end.nix'  # }
+        'punctuation.section.embedded.begin.svelte',
+        'punctuation.section.embedded.end.nix',  # }
+        'punctuation.section.embedded.end.svelte'
     ],
     'def:shebang': [
         'comment.line.number-sign.shebang'

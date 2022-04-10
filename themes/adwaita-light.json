@@ -83,8 +83,8 @@
         "storage.modifier.chomping-indicator.yaml",
         "storage.type.string.python",
         "meta.function-call.python support.type.python",
-        "meta.macro.rules entity.name.function.macro.rust",
-        "string.quoted.byte.raw.rust"
+        "string.quoted.byte.raw.rust",
+        "meta.macro.rules entity.name.function.macro.rust"
       ],
       "settings": {
         "foreground": "#504E55",
@@ -225,7 +225,9 @@
         "constant.character.entity",
         "punctuation.definition.template-expression",
         "punctuation.section.embedded.begin.nix",
-        "punctuation.section.embedded.end.nix"
+        "punctuation.section.embedded.begin.svelte",
+        "punctuation.section.embedded.end.nix",
+        "punctuation.section.embedded.end.svelte"
       ],
       "settings": {
         "foreground": "#C64600",
