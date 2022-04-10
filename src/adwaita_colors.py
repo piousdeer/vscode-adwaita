@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-from xml.etree import ElementTree
-import json
+from xml.etree.ElementTree import ElementTree, parse as parse_xml
 
 
 # https://gitlab.gnome.org/GNOME/gtksourceview/-/tree/master/tests/syntax-highlighting/
@@ -219,6 +218,14 @@ def gsv_to_textmate(scheme: ElementTree):
     """Convert a GtkSourceView style scheme to a TextMate theme."""
     colors = gsv_get_named_colors(scheme)
 
+    default_elem = scheme.find('style[@name="text"]')
+    default_foreground = None
+
+    if default_elem is not None:
+        default_foreground = colors[default_elem.get('foreground')]
+    if default_foreground is None:
+        raise Exception('no default color defined in scheme')
+
     EXTRA_RULES = [
         {
             'scope': [
@@ -240,7 +247,7 @@ def gsv_to_textmate(scheme: ElementTree):
             ],
             'settings': {
                 # Reset all of these to default foreground and fontStyle
-                'foreground': colors[scheme.find('style[@name="text"]').get('foreground')],
+                'foreground': default_foreground,
                 'fontStyle': ''
             }
         }
@@ -255,6 +262,7 @@ def gsv_to_textmate(scheme: ElementTree):
 
         if style_elem is None:
             print(f'warning: no {style_name} in scheme')
+            continue
 
         settings = {}
 
@@ -279,7 +287,7 @@ def get_adwaita_colors(theme_type):
         file = 'gtksourceview_xml/Adwaita-dark.xml'
     else:
         file = 'gtksourceview_xml/Adwaita.xml'
-    scheme = ElementTree.parse(file)
+    scheme = parse_xml(file)
     named_colors = gsv_get_named_colors(scheme)
     syntax_colors = gsv_to_textmate(scheme)
     return named_colors, syntax_colors
