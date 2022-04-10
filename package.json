@@ -3,7 +3,7 @@
 	"icon": "assets/icon.png",
 	"displayName": "Adwaita",
 	"description": "Theme for the GNOME desktop",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"publisher": "piousdeer",
 	"license": "GPL-3.0-only",
 	"engines": {
