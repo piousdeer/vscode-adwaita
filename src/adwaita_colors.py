@@ -96,6 +96,7 @@ MAP = {
     ],
     'def:type': [
         'support.type',
+        'keyword.type.cs',
         'source.go storage.type',
         # JS built-in constructors
         'support.class.builtin.js',

@@ -240,6 +240,7 @@
     {
       "scope": [
         "support.type",
+        "keyword.type.cs",
         "source.go storage.type",
         "support.class.builtin.js",
         "support.class.promise"
