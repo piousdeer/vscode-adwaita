@@ -20,7 +20,7 @@ MAP = {
         # YAML symbolic keywords
         'keyword.control.flow.block-scalar.literal.yaml',
         'keyword.control.flow.block-scalar.folded.yaml',
-        'storage.modifier.chomping-indicator.yaml'
+        'storage.modifier.chomping-indicator.yaml',
 
         # Python
         'storage.type.string.python', # f in f'strings'
