@@ -80,8 +80,11 @@
         "storage.type.function.arrow",
         "keyword.control.flow.block-scalar.literal.yaml",
         "keyword.control.flow.block-scalar.folded.yaml",
-        "storage.modifier.chomping-indicator.yamlstorage.type.string.python",
-        "meta.function-call.python support.type.python"
+        "storage.modifier.chomping-indicator.yaml",
+        "storage.type.string.python",
+        "meta.function-call.python support.type.python",
+        "meta.macro.rules entity.name.function.macro.rust",
+        "string.quoted.byte.raw.rust"
       ],
       "settings": {
         "foreground": "#C0BFBC",
@@ -128,6 +131,7 @@
     {
       "scope": [
         "support.type.property-name",
+        "string.quoted.single.char",
         "support.constant.property-value.css",
         "source.css keyword.other.unit"
       ],
@@ -138,7 +142,8 @@
     },
     {
       "scope": [
-        "constant.numeric"
+        "constant.numeric",
+        "constant.numeric.decimal entity.name.type.numeric.rust"
       ],
       "settings": {
         "foreground": "#7D8AC7",
@@ -267,6 +272,7 @@
         "support.type",
         "keyword.type.cs",
         "source.go storage.type",
+        "entity.name.type",
         "support.class.builtin.js",
         "support.class.promise"
       ],
@@ -428,6 +434,34 @@
       ],
       "settings": {
         "foreground": "#F66151",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "meta.attribute.rust",
+        "meta.attribute.rust keyword.operator"
+      ],
+      "settings": {
+        "foreground": "#7D8AC7",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "entity.name.type.lifetime.rust"
+      ],
+      "settings": {
+        "foreground": "#FFA348",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "entity.name.function.macro"
+      ],
+      "settings": {
+        "foreground": "#7D8AC7",
         "fontStyle": ""
       }
     },

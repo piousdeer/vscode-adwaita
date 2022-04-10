@@ -23,8 +23,11 @@ MAP = {
         'storage.modifier.chomping-indicator.yaml',
 
         # Python
-        'storage.type.string.python', # f in f'strings'
-        'meta.function-call.python support.type.python' # super() calls
+        'storage.type.string.python', # f, b, r string prefixes
+        'meta.function-call.python support.type.python', # super() calls
+        # Rust
+        'string.quoted.byte.raw.rust', # b string prefix
+        'meta.macro.rules entity.name.function.macro.rust', # macro_rules! →hello_world_macro← {
     ],
     'def:base-n-integer': [
         # Whole number (in e.g. JS)
@@ -51,6 +54,9 @@ MAP = {
     'def:constant': [
         # 'constant', # applies to CAPS_VARIABLES, which is unwanted
         'support.type.property-name', # { →"key"←: ... } (in e.g. JSON)
+        # Character (e.g. in Rust). Note: there should probably be a separate def:character rule,
+        # but Adwaita scheme doesn't include it (and falls back to def:constant).
+        'string.quoted.single.char',
         # CSS
         'support.constant.property-value.css', # absolute, bold, etc
         # CSS has many units (em, vw, ...) with potentially more to come in the future.
@@ -59,7 +65,9 @@ MAP = {
         'source.css keyword.other.unit',
     ],
     'def:decimal': [
-        'constant.numeric'
+        'constant.numeric',
+        # Rust
+        'constant.numeric.decimal entity.name.type.numeric.rust' # 1→i64←
     ],
     # 'def:deletion': [],
     'def:doc-comment-element': [
@@ -135,6 +143,8 @@ MAP = {
         'keyword.type.cs',
         # Go
         'source.go storage.type',
+        # Rust
+        'entity.name.type',
         # JS built-in constructors
         'support.class.builtin.js',
         'support.class.promise'
@@ -209,6 +219,18 @@ MAP = {
     'python:module-handler': [
         'keyword.control.import.python'
     ],
+
+    'rust:attribute': [
+        'meta.attribute.rust',
+        'meta.attribute.rust keyword.operator'
+    ],
+    'rust:lifetime': [
+        'entity.name.type.lifetime.rust'
+    ],
+    'rust:macro': [
+        'entity.name.function.macro'
+    ],
+    # 'rust:scope': [], # no selector
 
     'xml:attribute-name': [
         # <property →name←="variant">...
