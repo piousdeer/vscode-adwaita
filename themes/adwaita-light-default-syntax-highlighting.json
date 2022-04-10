@@ -44,6 +44,7 @@
     "sideBar.foreground": "#323232",
     "panelTitle.activeBorder": "#323232",
     "panelTitle.activeForeground": "#323232",
+    "activityBar.activeBorder": "#00000000",
     "activityBarBadge.background": "#3584E4",
     "button.background": "#3584E4",
     "button.border": "#3584E4",

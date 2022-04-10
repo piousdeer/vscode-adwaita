@@ -63,6 +63,7 @@ def get_adwaita_ui_colors(theme_type, colorful_status_bar=False):
         'panelTitle.activeBorder':              '#cccccc' if dark else '#323232',
         'panelTitle.activeForeground':          '#cccccc' if dark else '#323232',
 
+        'activityBar.activeBorder':             '#00000000',
         'activityBarBadge.background':          _('blue')(3),
         'button.background':                    _('blue')(3),
         # A border of the same color makes buttons slightly taller.
