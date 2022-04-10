@@ -2,24 +2,61 @@
 from xml.etree.ElementTree import ElementTree, parse as parse_xml
 
 
-# https://gitlab.gnome.org/GNOME/gtksourceview/-/tree/master/tests/syntax-highlighting/
-# https://gitlab.gnome.org/GNOME/gtksourceview/-/blob/master/data/language-specs/
+# A dictionary of GtkSourceView style names mapped to TextMate scopes.
+# Use "Inspect Editor Tokens and Scopes" in VS Code to inspect TM scopes.
+# Use this link to figure out what matches a style name: https://gitlab.gnome.org/GNOME/gtksourceview/-/blob/master/data/language-specs/
+# Use these snippets to test how your rules look: https://gitlab.gnome.org/GNOME/gtksourceview/-/tree/master/tests/syntax-highlighting/
 MAP = {
-    'text': [''],  # default color
-    # 'def:base-n-integer': [],
+    # Default color
+    'text': [
+        # Empty selector applies to everything
+        '',
+        # Embedded expressions, e.g. ${→something←} in a string
+        'meta.embedded',
+        # Most operators are symbolic. Make them of default color. Also include some symbolic keyboards.
+        # Alphabetical operators should be specifically whitelisted in def:keyword.
+        'keyword.operator',
+        'storage.type.function.arrow',  # =>
+        # YAML symbolic keywords
+        'keyword.control.flow.block-scalar.literal.yaml',
+        'keyword.control.flow.block-scalar.folded.yaml',
+        'storage.modifier.chomping-indicator.yaml'
+
+        # Python
+        'storage.type.string.python', # f in f'strings'
+        'meta.function-call.python support.type.python' # super() calls
+    ],
+    'def:base-n-integer': [
+        # Whole number (in e.g. JS)
+        'constant.numeric.binary', # 0b1
+        'constant.numeric.octal', # 0o1
+        'constant.numeric.hex', # 0x1
+        # Just the prefix/postfix (in e.g. C, Go)
+        'keyword.other.unit.binary', # 0b
+        'keyword.other.unit.octal', # 0o
+        'keyword.other.unit.hexadecimal', # 0x
+        'keyword.other.unit.imaginary', # 0x01→i←
+        'keyword.other.unit.exponent' # 0x01→p←2
+    ],
     'def:boolean': [
-        'constant.language'
+        'constant.language.boolean', # e.g. in JS
+        'constant.language.bool' # e.g. in Rust
     ],
     'def:comment': [
         'comment',
+        # YAML
         'entity.other.document.begin.yaml',  # ---
         'entity.other.document.end.yaml'  # ...
     ],
     'def:constant': [
-        # 'constant', # also applies to CAPS_VARIABLES
-        'support.type.property-name',
-        'source.css constant keyword.other.unit',
-        'support.constant.property-value.css'
+        # 'constant', # applies to CAPS_VARIABLES, which is unwanted
+        'support.type.property-name', # { →"key"←: ... } (in e.g. JSON)
+        # CSS
+        'support.constant.property-value.css', # absolute, bold, etc
+        # CSS has many units (em, vw, ...) with potentially more to come in the future.
+        # Until wildcards are implemented https://github.com/microsoft/vscode-textmate/issues/160,
+        # we can use this instead of `keyword.other.unit.*.css`:
+        'source.css keyword.other.unit',
     ],
     'def:decimal': [
         'constant.numeric'
@@ -41,21 +78,19 @@ MAP = {
         'markup.heading.markdown'
     ],
     'def:keyword': [
-        # most keywords (operators will be unstyled in EXTRA_RULES)
+        # Most keywords (operators are unstyled in 'text')
         'keyword',
-        # specifically include alphabetical operators
+        # Specifically include alphabetical operators and keywords
+        'keyword.operator.new',  # new
         'keyword.operator.logical.python',  # and, or
         'source.js keyword.operator.expression',  # typeof, instanceof
         'source.ts keyword.operator.expression',
-        'keyword.operator.new',  # new
-        # →const← name = value;
-        # →class← Class: ...
-        # →def← fn(): ...
+        # →const← name = ..., →class← Class: ..., →def← fn(): ...
         'storage.type',
         # →static← void Main(string[] args)
         'storage.modifier',
-        # key names in YAML
-        'entity.name.tag.yaml'
+        # YAML
+        'entity.name.tag.yaml' # key names
     ],
     # 'def:link-destination': [],
     # 'def:link-text': [],
@@ -67,25 +102,26 @@ MAP = {
     'def:preformatted-section': [],
     'def:preprocessor': [
         'meta.preprocessor',
-        # →#include← <config.h>
+        # →#include← <config.h> (override def:keyword)
         'meta.preprocessor keyword.control',
         # @decorator
         'entity.name.function.decorator',
-        # @media in CSS
-        'keyword.control.at-rule.media.css',
+        # At-rules (in e.g. CSS)
+        'keyword.control.at-rule.media',
         # &amp;
         'constant.character.entity',
-        # ${} in JS
+        # ${} (in e.g. JS)
         'punctuation.definition.template-expression',
-        # ${} in Nix
-        'punctuation.section.embedded'
+        # Nix
+        # In JSX these scopes match {} in <a b={...}>, not what we want
+        'punctuation.section.embedded.begin.nix', # ${
+        'punctuation.section.embedded.end.nix' # }
     ],
     'def:shebang': [
         'comment.line.number-sign.shebang'
     ],
     'def:special-char': [
-        # \n
-        'constant.character.escape'
+        'constant.character.escape' # \n
     ],
     'def:string': [
         'string'
@@ -95,7 +131,9 @@ MAP = {
     ],
     'def:type': [
         'support.type',
+        # C#
         'keyword.type.cs',
+        # Go
         'source.go storage.type',
         # JS built-in constructors
         'support.class.builtin.js',
@@ -110,8 +148,7 @@ MAP = {
     ],
 
     'c:printf': [
-        # %s
-        'string constant.other.placeholder'
+        'string constant.other.placeholder' # %s
     ],
     # 'c:signal-name': [],
     'c:storage-class': [
@@ -136,10 +173,8 @@ MAP = {
     'css:selector-symbol': [
         # >
         'meta.selector.css keyword.operator',
-        # [
-        'punctuation.definition.entity.begin.bracket.square.css',
-        # ]
-        'punctuation.definition.entity.end.bracket.square.css'
+        # Intentionally different: instead of coloring [, = and ] in elem[attr="val"], color just attr
+        'entity.other.attribute-name.css'
     ],
     # 'css:type-selector': [],
     'css:vendor-specific': [
@@ -227,33 +262,6 @@ def gsv_to_textmate(scheme: ElementTree):
     if default_foreground is None:
         raise Exception('no default color defined in scheme')
 
-    EXTRA_RULES = [
-        {
-            'scope': [
-                'variable',
-                # `${→abc←}`
-                'string meta.template.expression',
-                # super() calls
-                'meta.function-call.python support.type.python',
-                # f in f'strings'
-                'storage.type.string.python',
-                # Symbolic operators (most operators, alphabetical ones should be specifically
-                # whitelisted in MAP['def:keyword'])
-                'keyword.operator',
-                'storage.type.function.arrow',  # =>
-                # YAML operators
-                'keyword.control.flow.block-scalar.literal.yaml',
-                'keyword.control.flow.block-scalar.folded.yaml',
-                'storage.modifier.chomping-indicator.yaml'
-            ],
-            'settings': {
-                # Reset all of these to default foreground and fontStyle
-                'foreground': default_foreground,
-                'fontStyle': ''
-            }
-        }
-    ]
-
     rules = []
 
     scope_paths = []
@@ -279,7 +287,6 @@ def gsv_to_textmate(scheme: ElementTree):
         rule = {'scope': scope, 'settings': settings}
         rules.append(rule)
 
-    rules += EXTRA_RULES
     return rules
 
 

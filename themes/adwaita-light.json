@@ -74,7 +74,14 @@
   "tokenColors": [
     {
       "scope": [
-        ""
+        "",
+        "meta.embedded",
+        "keyword.operator",
+        "storage.type.function.arrow",
+        "keyword.control.flow.block-scalar.literal.yaml",
+        "keyword.control.flow.block-scalar.folded.yaml",
+        "storage.modifier.chomping-indicator.yamlstorage.type.string.python",
+        "meta.function-call.python support.type.python"
       ],
       "settings": {
         "foreground": "#504E55",
@@ -83,7 +90,24 @@
     },
     {
       "scope": [
-        "constant.language"
+        "constant.numeric.binary",
+        "constant.numeric.octal",
+        "constant.numeric.hex",
+        "keyword.other.unit.binary",
+        "keyword.other.unit.octal",
+        "keyword.other.unit.hexadecimal",
+        "keyword.other.unit.imaginary",
+        "keyword.other.unit.exponent"
+      ],
+      "settings": {
+        "foreground": "#4E57BA",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "constant.language.boolean",
+        "constant.language.bool"
       ],
       "settings": {
         "foreground": "#4E57BA",
@@ -104,8 +128,8 @@
     {
       "scope": [
         "support.type.property-name",
-        "source.css constant keyword.other.unit",
-        "support.constant.property-value.css"
+        "support.constant.property-value.css",
+        "source.css keyword.other.unit"
       ],
       "settings": {
         "foreground": "#4E57BA",
@@ -158,10 +182,10 @@
     {
       "scope": [
         "keyword",
+        "keyword.operator.new",
         "keyword.operator.logical.python",
         "source.js keyword.operator.expression",
         "source.ts keyword.operator.expression",
-        "keyword.operator.new",
         "storage.type",
         "storage.modifier",
         "entity.name.tag.yaml"
@@ -192,10 +216,11 @@
         "meta.preprocessor",
         "meta.preprocessor keyword.control",
         "entity.name.function.decorator",
-        "keyword.control.at-rule.media.css",
+        "keyword.control.at-rule.media",
         "constant.character.entity",
         "punctuation.definition.template-expression",
-        "punctuation.section.embedded"
+        "punctuation.section.embedded.begin.nix",
+        "punctuation.section.embedded.end.nix"
       ],
       "settings": {
         "foreground": "#C64600",
@@ -318,8 +343,7 @@
     {
       "scope": [
         "meta.selector.css keyword.operator",
-        "punctuation.definition.entity.begin.bracket.square.css",
-        "punctuation.definition.entity.end.bracket.square.css"
+        "entity.other.attribute-name.css"
       ],
       "settings": {
         "foreground": "#C64600",
@@ -448,23 +472,6 @@
       "settings": {
         "foreground": "#D38B09",
         "fontStyle": "bold"
-      }
-    },
-    {
-      "scope": [
-        "variable",
-        "string meta.template.expression",
-        "meta.function-call.python support.type.python",
-        "storage.type.string.python",
-        "keyword.operator",
-        "storage.type.function.arrow",
-        "keyword.control.flow.block-scalar.literal.yaml",
-        "keyword.control.flow.block-scalar.folded.yaml",
-        "storage.modifier.chomping-indicator.yaml"
-      ],
-      "settings": {
-        "foreground": "#504E55",
-        "fontStyle": ""
       }
     },
     {
