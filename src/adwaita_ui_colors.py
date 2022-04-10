@@ -75,7 +75,7 @@ def get_adwaita_ui_colors(theme_type, colorful_status_bar=False):
         'list.focusHighlightForeground':        '#ffffff',
 
 
-        'editorGutter.addedBackground':                     _('green')(6 if dark else 2),
+        'editorGutter.addedBackground':                     _('green')(6 if dark else 3),
         'editorGutter.deletedBackground':                   _('red')(5 if dark else 4),
         'editorGutter.modifiedBackground':                  _('blue')(5 if dark else 2),
         'gitDecoration.addedResourceForeground':            _('green')(1 if dark else 5) + 'dd',

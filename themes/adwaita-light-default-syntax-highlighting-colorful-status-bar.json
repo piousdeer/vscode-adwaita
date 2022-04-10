@@ -53,7 +53,7 @@
     "list.activeSelectionForeground": "#ffffff",
     "list.activeSelectionIconForeground": "#ffffff",
     "list.focusHighlightForeground": "#ffffff",
-    "editorGutter.addedBackground": "#57E389",
+    "editorGutter.addedBackground": "#33D17A",
     "editorGutter.deletedBackground": "#C01C28",
     "editorGutter.modifiedBackground": "#62A0EA",
     "gitDecoration.addedResourceForeground": "#26A269dd",
