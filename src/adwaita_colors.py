@@ -12,7 +12,9 @@ MAP = {
         'constant.language'
     ],
     'def:comment': [
-        'comment'
+        'comment',
+        'entity.other.document.begin.yaml', # ---
+        'entity.other.document.end.yaml' # ...
     ],
     'def:constant': [
         # 'constant', # also applies to CAPS_VARIABLES
@@ -57,6 +59,8 @@ MAP = {
         'storage.modifier',
         # static →void← Main(→string←[] args)
         'keyword.type',
+        # key names in YAML
+        'entity.name.tag.yaml'
     ],
     # 'def:link-destination': [],
     # 'def:link-text': [],
@@ -239,6 +243,10 @@ def gsv_to_textmate(scheme: ElementTree):
                 # 'keyword.operator.ternary', # ?:
                 # 'source.nix keyword.operator', # Nix operators (as provided by https://github.com/nix-community/vscode-nix-ide)
                 'storage.type.function.arrow', # =>
+                # YAML operators
+                'keyword.control.flow.block-scalar.literal.yaml',
+                'keyword.control.flow.block-scalar.folded.yaml',
+                'storage.modifier.chomping-indicator.yaml'
             ],
             'settings': {
                 # Reset all of these to default foreground and fontStyle

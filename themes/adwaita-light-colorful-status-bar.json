@@ -92,7 +92,9 @@
     },
     {
       "scope": [
-        "comment"
+        "comment",
+        "entity.other.document.begin.yaml",
+        "entity.other.document.end.yaml"
       ],
       "settings": {
         "foreground": "#77767B",
@@ -162,7 +164,8 @@
         "keyword.operator.new",
         "storage.type",
         "storage.modifier",
-        "keyword.type"
+        "keyword.type",
+        "entity.name.tag.yaml"
       ],
       "settings": {
         "foreground": "#C64600",
@@ -454,7 +457,10 @@
         "storage.type.string.python",
         "keyword.operator",
         "keyword.operator.type.annotation",
-        "storage.type.function.arrow"
+        "storage.type.function.arrow",
+        "keyword.control.flow.block-scalar.literal.yaml",
+        "keyword.control.flow.block-scalar.folded.yaml",
+        "storage.modifier.chomping-indicator.yaml"
       ],
       "settings": {
         "foreground": "#504E55",
