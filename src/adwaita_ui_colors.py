@@ -5,7 +5,7 @@ named_colors, _syntax_colors = get_adwaita_colors('light')
 
 
 def get_adwaita_ui_colors(theme_type, colorful_status_bar=False):
-    _ = lambda name: lambda value: named_colors[f'{name}_{value}']
+    def _(name): return lambda value: named_colors[f'{name}_{value}']
     dark = theme_type == 'dark'
 
     ui_colors = {
@@ -87,7 +87,7 @@ def get_adwaita_ui_colors(theme_type, colorful_status_bar=False):
         'gitDecoration.ignoredResourceForeground':          _('dark')(1),
 
         # Color-picked colors
-        'button.hoverBackground':               '#4990e7', 
+        'button.hoverBackground':               '#4990e7',
         'focusBorder':                          '#5f7999',
 
         # Hand-picked colors

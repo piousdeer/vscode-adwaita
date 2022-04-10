@@ -164,7 +164,6 @@
         "keyword.operator.new",
         "storage.type",
         "storage.modifier",
-        "keyword.type",
         "entity.name.tag.yaml"
       ],
       "settings": {
@@ -456,7 +455,6 @@
         "meta.function-call.python support.type.python",
         "storage.type.string.python",
         "keyword.operator",
-        "keyword.operator.type.annotation",
         "storage.type.function.arrow",
         "keyword.control.flow.block-scalar.literal.yaml",
         "keyword.control.flow.block-scalar.folded.yaml",

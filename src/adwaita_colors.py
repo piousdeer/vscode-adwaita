@@ -6,15 +6,15 @@ import json
 # https://gitlab.gnome.org/GNOME/gtksourceview/-/tree/master/tests/syntax-highlighting/
 # https://gitlab.gnome.org/GNOME/gtksourceview/-/blob/master/data/language-specs/
 MAP = {
-    'text': [''], # default color
+    'text': [''],  # default color
     # 'def:base-n-integer': [],
     'def:boolean': [
         'constant.language'
     ],
     'def:comment': [
         'comment',
-        'entity.other.document.begin.yaml', # ---
-        'entity.other.document.end.yaml' # ...
+        'entity.other.document.begin.yaml',  # ---
+        'entity.other.document.end.yaml'  # ...
     ],
     'def:constant': [
         # 'constant', # also applies to CAPS_VARIABLES
@@ -42,23 +42,19 @@ MAP = {
         'markup.heading.markdown'
     ],
     'def:keyword': [
-        # most keywords (some will be unstyled in extra_rules)
+        # most keywords (operators will be unstyled in EXTRA_RULES)
         'keyword',
         # specifically include alphabetical operators
-        'keyword.operator.logical.python', # and, or
-        'source.js keyword.operator.expression', # typeof, instanceof
+        'keyword.operator.logical.python',  # and, or
+        'source.js keyword.operator.expression',  # typeof, instanceof
         'source.ts keyword.operator.expression',
-        'keyword.operator.new', # new
+        'keyword.operator.new',  # new
         # →const← name = value;
-        'storage.type',
         # →class← Class: ...
-        # 'storage.type.class',
         # →def← fn(): ...
-        # 'storage.type.function',
+        'storage.type',
         # →static← void Main(string[] args)
         'storage.modifier',
-        # static →void← Main(→string←[] args)
-        'keyword.type',
         # key names in YAML
         'entity.name.tag.yaml'
     ],
@@ -131,7 +127,7 @@ MAP = {
     ],
     'css:property-name': [
         'support.type.property-name.css'
-    ],  
+    ],
     'css:pseudo-selector': [
         'entity.other.attribute-name.pseudo-element.css',
         'entity.other.attribute-name.pseudo-class.css',
@@ -144,7 +140,6 @@ MAP = {
         'punctuation.definition.entity.begin.bracket.square.css',
         # ]
         'punctuation.definition.entity.end.bracket.square.css'
-    
     ],
     # 'css:type-selector': [],
     'css:vendor-specific': [
@@ -210,12 +205,14 @@ MAP = {
     ]
 }
 
+
 def gsv_get_named_colors(scheme: ElementTree):
     """Get all colors from a GtkSourceView style scheme."""
     colors = {}
     for color_elem in scheme.findall('color'):
         colors[color_elem.get('name')] = color_elem.get('value')
     return colors
+
 
 def gsv_to_textmate(scheme: ElementTree):
     """Convert a GtkSourceView style scheme to a TextMate theme."""
@@ -234,15 +231,7 @@ def gsv_to_textmate(scheme: ElementTree):
                 # Symbolic operators (most operators, alphabetical ones should be specifically
                 # whitelisted in MAP['def:keyword'])
                 'keyword.operator',
-                'keyword.operator.type.annotation', # : # todo: should comment?
-                # 'keyword.operator.bitwise', # &
-                # 'keyword.operator.logical', # &&
-                # 'keyword.operator.assignment', # =
-                # 'keyword.operator.comparison', # >
-                # 'keyword.operator.arithmetic', # +
-                # 'keyword.operator.ternary', # ?:
-                # 'source.nix keyword.operator', # Nix operators (as provided by https://github.com/nix-community/vscode-nix-ide)
-                'storage.type.function.arrow', # =>
+                'storage.type.function.arrow',  # =>
                 # YAML operators
                 'keyword.control.flow.block-scalar.literal.yaml',
                 'keyword.control.flow.block-scalar.folded.yaml',
