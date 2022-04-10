@@ -23,27 +23,28 @@ MAP = {
         'storage.modifier.chomping-indicator.yaml',
 
         # Python
-        'storage.type.string.python', # f, b, r string prefixes
-        'meta.function-call.python support.type.python', # super() calls
+        'storage.type.string.python',  # f, b, r string prefixes
+        'meta.function-call.python support.type.python',  # super() calls
         # Rust
-        'string.quoted.byte.raw.rust', # b string prefix
-        'meta.macro.rules entity.name.function.macro.rust', # macro_rules! →hello_world_macro← {
+        'string.quoted.byte.raw.rust',  # b string prefix
+        # macro_rules! →hello_world_macro← {
+        'meta.macro.rules entity.name.function.macro.rust',
     ],
     'def:base-n-integer': [
         # Whole number (in e.g. JS)
-        'constant.numeric.binary', # 0b1
-        'constant.numeric.octal', # 0o1
-        'constant.numeric.hex', # 0x1
+        'constant.numeric.binary',  # 0b1
+        'constant.numeric.octal',  # 0o1
+        'constant.numeric.hex',  # 0x1
         # Just the prefix/postfix (in e.g. C, Go)
-        'keyword.other.unit.binary', # 0b
-        'keyword.other.unit.octal', # 0o
-        'keyword.other.unit.hexadecimal', # 0x
-        'keyword.other.unit.imaginary', # 0x01→i←
-        'keyword.other.unit.exponent' # 0x01→p←2
+        'keyword.other.unit.binary',  # 0b
+        'keyword.other.unit.octal',  # 0o
+        'keyword.other.unit.hexadecimal',  # 0x
+        'keyword.other.unit.imaginary',  # 0x01→i←
+        'keyword.other.unit.exponent'  # 0x01→p←2
     ],
     'def:boolean': [
-        'constant.language.boolean', # e.g. in JS
-        'constant.language.bool' # e.g. in Rust
+        'constant.language.boolean',  # e.g. in JS
+        'constant.language.bool'  # e.g. in Rust
     ],
     'def:comment': [
         'comment',
@@ -53,12 +54,12 @@ MAP = {
     ],
     'def:constant': [
         # 'constant', # applies to CAPS_VARIABLES, which is unwanted
-        'support.type.property-name', # { →"key"←: ... } (in e.g. JSON)
+        'support.type.property-name',  # { →"key"←: ... } (in e.g. JSON)
         # Character (e.g. in Rust). Note: there should probably be a separate def:character rule,
         # but Adwaita scheme doesn't include it (and falls back to def:constant).
         'string.quoted.single.char',
         # CSS
-        'support.constant.property-value.css', # absolute, bold, etc
+        'support.constant.property-value.css',  # absolute, bold, etc
         # CSS has many units (em, vw, ...) with potentially more to come in the future.
         # Until wildcards are implemented https://github.com/microsoft/vscode-textmate/issues/160,
         # we can use this instead of `keyword.other.unit.*.css`:
@@ -67,7 +68,7 @@ MAP = {
     'def:decimal': [
         'constant.numeric',
         # Rust
-        'constant.numeric.decimal entity.name.type.numeric.rust' # 1→i64←
+        'constant.numeric.decimal entity.name.type.numeric.rust'  # 1→i64←
     ],
     # 'def:deletion': [],
     'def:doc-comment-element': [
@@ -98,7 +99,7 @@ MAP = {
         # →static← void Main(string[] args)
         'storage.modifier',
         # YAML
-        'entity.name.tag.yaml' # key names
+        'entity.name.tag.yaml'  # key names
     ],
     # 'def:link-destination': [],
     # 'def:link-text': [],
@@ -122,14 +123,14 @@ MAP = {
         'punctuation.definition.template-expression',
         # Nix
         # In JSX these scopes match {} in <a b={...}>, not what we want
-        'punctuation.section.embedded.begin.nix', # ${
-        'punctuation.section.embedded.end.nix' # }
+        'punctuation.section.embedded.begin.nix',  # ${
+        'punctuation.section.embedded.end.nix'  # }
     ],
     'def:shebang': [
         'comment.line.number-sign.shebang'
     ],
     'def:special-char': [
-        'constant.character.escape' # \n
+        'constant.character.escape'  # \n
     ],
     'def:string': [
         'string'
@@ -158,7 +159,7 @@ MAP = {
     ],
 
     'c:printf': [
-        'string constant.other.placeholder' # %s
+        'string constant.other.placeholder'  # %s
     ],
     # 'c:signal-name': [],
     'c:storage-class': [
