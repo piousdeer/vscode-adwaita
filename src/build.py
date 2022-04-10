@@ -7,7 +7,7 @@ from adwaita_ui_colors import get_adwaita_ui_colors
 
 
 def load_jsonc(path):
-    """Read JSON with comments."""
+    '''Read JSON with comments.'''
     original = open(path).read()
     stripped = re.sub(r'[^:]//.+$', '', original, flags=re.MULTILINE)
     return json.loads(stripped)
@@ -33,8 +33,8 @@ extra_syntax_colors = [
 ]
 
 package_json_entry = {
-    "contributes": {
-        "themes": []
+    'contributes': {
+        'themes': []
     }
 }
 
@@ -61,20 +61,20 @@ for (
         name += ' & colorful status bar'
 
     theme = {
-        "$schema": "vscode://schemas/color-theme",
-        "name": name,
-        "type": "light",
-        "colors": ui_colors,
-        "tokenColors": syntax_colors
+        '$schema': 'vscode://schemas/color-theme',
+        'name': name,
+        'type': 'light',
+        'colors': ui_colors,
+        'tokenColors': syntax_colors
     }
 
     file_name = f'{name.lower().replace(" ", "-").replace("-&-", "-")}.json'
     json.dump(theme, open(f'../themes/{file_name}', 'w'), indent=2)
 
     package_json_entry['contributes']['themes'].append({
-        "label": name,
-        "uiTheme": "vs-dark" if theme_type == 'dark' else "vs",
-        "path": f"./themes/{file_name}"
+        'label': name,
+        'uiTheme': 'vs-dark' if theme_type == 'dark' else 'vs',
+        'path': f'./themes/{file_name}'
     })
 
 print('Suggested package.json entry:')

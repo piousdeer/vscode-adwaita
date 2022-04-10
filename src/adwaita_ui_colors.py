@@ -99,13 +99,13 @@ def get_adwaita_ui_colors(theme_type, colorful_status_bar=False):
 
     if colorful_status_bar:
         ui_colors |= {
-            "statusBar.background":             _('blue')(4),
-            "statusBar.debuggingBackground":    _('orange')(5),
-            "statusBar.noFolderBackground":     _('purple')(5),
-            "statusBarItem.remoteBackground":   _('green')(6),
-            "statusBar.foreground":             "#ffffff",
-            "statusBar.debuggingForeground":    "#ffffff",
-            "statusBar.noFolderForeground":     "#ffffff"
+            'statusBar.background':             _('blue')(4),
+            'statusBar.debuggingBackground':    _('orange')(5),
+            'statusBar.noFolderBackground':     _('purple')(5),
+            'statusBarItem.remoteBackground':   _('green')(6),
+            'statusBar.foreground':             '#ffffff',
+            'statusBar.debuggingForeground':    '#ffffff',
+            'statusBar.noFolderForeground':     '#ffffff'
         }
 
     return ui_colors

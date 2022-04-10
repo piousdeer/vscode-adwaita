@@ -208,7 +208,7 @@ MAP = {
 
 
 def gsv_get_named_colors(scheme: ElementTree):
-    """Get all colors from a GtkSourceView style scheme."""
+    '''Get all colors from a GtkSourceView style scheme.'''
     colors = {}
     for color_elem in scheme.findall('color'):
         colors[color_elem.get('name')] = color_elem.get('value')
@@ -216,7 +216,7 @@ def gsv_get_named_colors(scheme: ElementTree):
 
 
 def gsv_to_textmate(scheme: ElementTree):
-    """Convert a GtkSourceView style scheme to a TextMate theme."""
+    '''Convert a GtkSourceView style scheme to a TextMate theme.'''
     colors = gsv_get_named_colors(scheme)
 
     default_elem = scheme.find('style[@name="text"]')
