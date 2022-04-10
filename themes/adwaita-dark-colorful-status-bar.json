@@ -412,6 +412,7 @@
         "meta.tag entity.other.attribute-name",
         "meta.tag keyword.operator.assignment",
         "punctuation.separator.key-value.html",
+        "punctuation.separator.key-value.svelte",
         "text.xml meta.tag"
       ],
       "settings": {

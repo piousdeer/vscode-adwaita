@@ -180,8 +180,9 @@ MAP = {
         'meta.tag entity.other.attribute-name',
         # <property name→=←"variant">... in JSX
         'meta.tag keyword.operator.assignment',
-        # <property name→=←"variant">... in HTML
+        # <property name→=←"variant">... in HTML and alike
         'punctuation.separator.key-value.html',
+        'punctuation.separator.key-value.svelte',
         # XML doesn't have a selector for =
         'text.xml meta.tag'
     ],
