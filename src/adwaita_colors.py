@@ -13,7 +13,7 @@ MAP = {
         '',
         # Embedded expressions, e.g. ${→something←} in a string
         'meta.embedded',
-        # Most operators are symbolic. Make them of default color. Also include some symbolic keyboards.
+        # Most operators are symbolic. Make them of default color along with some symbolic keywords.
         # Alphabetical operators should be specifically whitelisted in def:keyword.
         'keyword.operator',
         'storage.type.function.arrow',  # =>
