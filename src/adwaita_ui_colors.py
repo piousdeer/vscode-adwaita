@@ -18,7 +18,7 @@ def get_adwaita_ui_colors(theme_type, colorful_status_bar=False):
         'tab.inactiveBackground':               '#262626' if dark else '#e1e1e1',
         'editorGroupHeader.tabsBackground':     '#262626' if dark else '#e1e1e1',
         'breadcrumb.background':                '#262626' if dark else '#e1e1e1',
-        'tab.hoverBackground':                  '#2d2d2d' if dark else '#dcdcdc',
+        'tab.hoverBackground':                  '#363636' if dark else '#dcdcdc',
         # 'tab.activeForeground':               '#ffffff'
         # 'tab.inactiveForeground':             '#cccccc'
 
