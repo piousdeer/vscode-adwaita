@@ -13,6 +13,9 @@ MAP = {
         '',
         # Embedded expressions, e.g. ${→something←} in a string
         'meta.embedded',
+        # Embedded expression punctuation in XML attributes
+        # (e.g. <Component prop=→{←value→}←> in JSX)
+        'meta.tag.attributes punctuation.section.embedded',
         # Most operators are symbolic. Make them of default color along with some symbolic keywords.
         # Alphabetical operators should be specifically whitelisted in def:keyword.
         'keyword.operator',
@@ -117,14 +120,10 @@ MAP = {
         'keyword.control.at-rule.media',
         # &amp;
         'constant.character.entity',
+        # ${}
+        'punctuation.section.embedded',
         # ${} (in e.g. JS)
-        'punctuation.definition.template-expression',
-        # Nix, Svelte
-        # In JSX these scopes match {} in <a b={...}>, not what we want
-        'punctuation.section.embedded.begin.nix',  # ${
-        'punctuation.section.embedded.begin.svelte',
-        'punctuation.section.embedded.end.nix',  # }
-        'punctuation.section.embedded.end.svelte'
+        'punctuation.definition.template-expression'
     ],
     'def:shebang': [
         'comment.line.number-sign.shebang'
