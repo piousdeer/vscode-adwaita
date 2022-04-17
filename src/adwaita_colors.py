@@ -159,7 +159,7 @@ MAP = {
     ],
 
     'c:printf': [
-        'string constant.other.placeholder'  # %s
+        'constant.other.placeholder'  # %s
     ],
     # 'c:signal-name': [],
     'c:storage-class': [
@@ -209,7 +209,9 @@ MAP = {
         'markup.deleted.diff'
     ],
 
-    # 'go:printf': [],
+    'go:printf': [
+        'constant.other.placeholder.go'
+    ],
 
     'python:builtin-function': [
         'support.function.builtin.python'

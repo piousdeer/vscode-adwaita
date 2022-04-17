@@ -293,7 +293,7 @@
     },
     {
       "scope": [
-        "string constant.other.placeholder"
+        "constant.other.placeholder"
       ],
       "settings": {
         "foreground": "#4E57BA",
@@ -408,6 +408,15 @@
       ],
       "settings": {
         "foreground": "#F66151",
+        "fontStyle": ""
+      }
+    },
+    {
+      "scope": [
+        "constant.other.placeholder.go"
+      ],
+      "settings": {
+        "foreground": "#4E57BA",
         "fontStyle": ""
       }
     },
