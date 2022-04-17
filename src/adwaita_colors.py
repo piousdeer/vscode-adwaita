@@ -18,17 +18,16 @@ MAP = {
         'keyword.operator',
         'storage.type.function.arrow',  # =>
         # YAML symbolic keywords
-        'keyword.control.flow.block-scalar.literal.yaml',
-        'keyword.control.flow.block-scalar.folded.yaml',
-        'storage.modifier.chomping-indicator.yaml',
+        'keyword.control.flow.block-scalar.literal',
+        'keyword.control.flow.block-scalar.folded',
+        'storage.modifier.chomping-indicator',
 
-        # Python
-        'storage.type.string.python',  # f, b, r string prefixes
-        'meta.function-call.python support.type.python',  # super() calls
+        'storage.type.string',  # f, b, r string prefixes (in e.g. Python)
+        'string.quoted.byte.raw.rust',  # b string prefix (in e.g. Rust)
+
         # Rust
-        'string.quoted.byte.raw.rust',  # b string prefix
         # macro_rules! →hello_world_macro← {
-        'meta.macro.rules entity.name.function.macro.rust',
+        'meta.macro.rules entity.name.function.macro.rust'
     ],
     'def:base-n-integer': [
         # Whole number (in e.g. JS)
@@ -67,8 +66,7 @@ MAP = {
     ],
     'def:decimal': [
         'constant.numeric',
-        # Rust
-        'constant.numeric.decimal entity.name.type.numeric.rust'  # 1→i64←
+        'constant.numeric.decimal entity.name.type.numeric'  # 1→i64← (in e.g. Rust)
     ],
     # 'def:deletion': [],
     'def:doc-comment-element': [

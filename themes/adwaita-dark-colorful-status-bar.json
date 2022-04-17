@@ -79,11 +79,10 @@
         "meta.embedded",
         "keyword.operator",
         "storage.type.function.arrow",
-        "keyword.control.flow.block-scalar.literal.yaml",
-        "keyword.control.flow.block-scalar.folded.yaml",
-        "storage.modifier.chomping-indicator.yaml",
-        "storage.type.string.python",
-        "meta.function-call.python support.type.python",
+        "keyword.control.flow.block-scalar.literal",
+        "keyword.control.flow.block-scalar.folded",
+        "storage.modifier.chomping-indicator",
+        "storage.type.string",
         "string.quoted.byte.raw.rust",
         "meta.macro.rules entity.name.function.macro.rust"
       ],
@@ -144,7 +143,7 @@
     {
       "scope": [
         "constant.numeric",
-        "constant.numeric.decimal entity.name.type.numeric.rust"
+        "constant.numeric.decimal entity.name.type.numeric"
       ],
       "settings": {
         "foreground": "#7D8AC7",
