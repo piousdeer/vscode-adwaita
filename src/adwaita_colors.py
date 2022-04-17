@@ -6,16 +6,21 @@ from xml.etree.ElementTree import ElementTree, parse as parse_xml
 # Use "Inspect Editor Tokens and Scopes" in VS Code to inspect TM scopes.
 # Use this link to figure out what matches a style name: https://gitlab.gnome.org/GNOME/gtksourceview/-/blob/master/data/language-specs/
 # Use these snippets to test how your rules look: https://gitlab.gnome.org/GNOME/gtksourceview/-/tree/master/tests/syntax-highlighting/
+#
+# If you wish to target all sub-scopes of a scope for a single language, you
+# should use `source.<lang> parent-scope` instead of `parent.scope.*.<lang>`
+# until wildcards are implemented: https://github.com/microsoft/vscode-textmate/issues/160,
 MAP = {
     # Default color
     'text': [
         # Empty selector applies to everything
         '',
-        # Embedded expressions, e.g. ${→something←} in a string
+
+        # Embedded expressions (e.g. ${→something←} in a string)
         'meta.embedded',
-        # Embedded expression punctuation in XML attributes
-        # (e.g. <Component prop=→{←value→}←> in JSX)
+        # Embedded expression punctuation in XML attributes (e.g. <Component prop=→{←value→}←> in JSX)
         'meta.tag.attributes punctuation.section.embedded',
+
         # Most operators are symbolic. Make them of default color along with some symbolic keywords.
         # Alphabetical operators should be specifically whitelisted in def:keyword.
         'keyword.operator',
@@ -29,14 +34,14 @@ MAP = {
         'string.quoted.byte.raw',  # b string prefix (in e.g. Rust)
 
         # Rust
-        # macro_rules! →hello_world_macro← {
-        'meta.macro.rules entity.name.function.macro.rust'
+        'meta.macro.rules entity.name.function.macro.rust' # macro_rules! →hello_world_macro← {
     ],
     'def:base-n-integer': [
         # Whole number (in e.g. JS)
         'constant.numeric.binary',  # 0b1
         'constant.numeric.octal',  # 0o1
         'constant.numeric.hex',  # 0x1
+
         # Just the prefix/postfix (in e.g. C, Go)
         'keyword.other.unit.binary',  # 0b
         'keyword.other.unit.octal',  # 0o
@@ -45,8 +50,8 @@ MAP = {
         'keyword.other.unit.exponent'  # 0x01→p←2
     ],
     'def:boolean': [
-        'constant.language.boolean',  # e.g. in JS
-        'constant.language.bool'  # e.g. in Rust
+        'constant.language.boolean',  # (in e.g. JS)
+        'constant.language.bool'  # (in e.g. Rust)
     ],
     'def:comment': [
         'comment',
@@ -55,18 +60,18 @@ MAP = {
         'entity.other.document.end.yaml'  # ...
     ],
     'def:constant': [
-        # 'constant', # applies to CAPS_VARIABLES, which is unwanted
-        'constant.language',
-        'support.type.property-name',  # { →"key"←: ... } (in e.g. JSON)
-        # Character (e.g. in Rust). Note: there should probably be a separate def:character rule,
-        # but Adwaita scheme doesn't include it (and falls back to def:constant).
+        # Note: `constant` may apply to user-defined constants, which is unwanted
+        'constant.language',  # true, false
+
+        # Character (in e.g. Rust). Note: there should probably be a separate def:character rule,
+        # but the Adwaita scheme doesn't include it and gtksv falls back to def:constant.
         'string.quoted.single.char',
+
+        'support.type.property-name',  # { →"key"←: ... } (in e.g. JSON)
+
         # CSS
         'support.constant.property-value.css',  # absolute, bold, etc
-        # CSS has many units (em, vw, ...) with potentially more to come in the future.
-        # Until wildcards are implemented https://github.com/microsoft/vscode-textmate/issues/160,
-        # we can use this instead of `keyword.other.unit.*.css`:
-        'source.css keyword.other.unit',
+        'source.css keyword.other.unit'
     ],
     'def:decimal': [
         'constant.numeric',
@@ -89,17 +94,20 @@ MAP = {
         'markup.heading.markdown'
     ],
     'def:keyword': [
-        # Most keywords (operators are unstyled in 'text')
+        # Most keywords (operators are unstyled in `text`)
         'keyword',
         # Specifically include alphabetical operators and keywords
         'keyword.operator.new',  # new
         'keyword.operator.logical.python',  # and, or
         'source.js keyword.operator.expression',  # typeof, instanceof
         'source.ts keyword.operator.expression',
-        # →static← void Main(string[] args)
-        'storage.modifier',
-        # YAML
-        'entity.name.tag.yaml',  # key names
+        'storage.modifier',  # →static← void Main(string[] args)
+
+        # YAML key names are considered tag names. Tag names and strings are of a very similar color
+        # (https://github.com/piousdeer/vscode-adwaita/issues/4), so we treat them as keywords like
+        # gtksv does.
+        'entity.name.tag.yaml',
+
         # Workarounds for extensions that incorrectly mark keywords with `storage.type`
         # (https://github.com/piousdeer/vscode-adwaita/issues/5)
         'source.js storage.type',
@@ -117,18 +125,12 @@ MAP = {
     'def:preformatted-section': [],
     'def:preprocessor': [
         'meta.preprocessor',
-        # →#include← <config.h> (override def:keyword)
-        'meta.preprocessor keyword.control',
-        # @decorator
-        'entity.name.function.decorator',
-        # At-rules (in e.g. CSS)
-        'keyword.control.at-rule.media',
-        # &amp;
-        'constant.character.entity',
-        # ${}
-        'punctuation.section.embedded',
-        # ${} (in e.g. JS)
-        'punctuation.definition.template-expression'
+        'meta.preprocessor keyword.control',  # →#include← <config.h> (override def:keyword)
+        'entity.name.function.decorator',  # @decorator (in e.g. Python)
+        'keyword.control.at-rule.media',  # @at-rule (in e.g. CSS)
+        'constant.character.entity',  # &amp;
+        'punctuation.section.embedded',  # ${}
+        'punctuation.definition.template-expression'  # ${} (in e.g. JS)
     ],
     'def:shebang': [
         'comment.line.number-sign.shebang'

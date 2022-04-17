@@ -132,8 +132,8 @@
     {
       "scope": [
         "constant.language",
-        "support.type.property-name",
         "string.quoted.single.char",
+        "support.type.property-name",
         "support.constant.property-value.css",
         "source.css keyword.other.unit"
       ],
