@@ -194,6 +194,8 @@
         "source.js keyword.operator.expression",
         "source.ts keyword.operator.expression",
         "storage.modifier",
+        "storage.type.class",
+        "storage.type.function",
         "entity.name.tag.yaml",
         "source.js storage.type",
         "source.ts storage.type",

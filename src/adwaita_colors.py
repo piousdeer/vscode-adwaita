@@ -102,6 +102,8 @@ MAP = {
         'source.js keyword.operator.expression',  # typeof, instanceof
         'source.ts keyword.operator.expression',
         'storage.modifier',  # →static← void Main(string[] args)
+        'storage.type.class',  # →class← Cat
+        'storage.type.function',  # →function← meow()
 
         # YAML key names are considered tag names. Tag names and strings are of a very similar color
         # (https://github.com/piousdeer/vscode-adwaita/issues/4), so we treat them as keywords like
