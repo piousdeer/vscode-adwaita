@@ -75,7 +75,7 @@ MAP = {
     ],
     'def:decimal': [
         'constant.numeric',
-        'constant.numeric.decimal entity.name.type.numeric'  # 1→i64← (in e.g. Rust)
+        'constant.numeric entity.name.type.numeric'  # 1→i64← (in e.g. Rust)
     ],
     # 'def:deletion': [],
     'def:doc-comment-element': [

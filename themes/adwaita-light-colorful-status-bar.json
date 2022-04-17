@@ -145,7 +145,7 @@
     {
       "scope": [
         "constant.numeric",
-        "constant.numeric.decimal entity.name.type.numeric"
+        "constant.numeric entity.name.type.numeric"
       ],
       "settings": {
         "foreground": "#4E57BA",
