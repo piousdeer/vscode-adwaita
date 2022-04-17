@@ -225,6 +225,8 @@
       "scope": [
         "meta.preprocessor",
         "meta.preprocessor keyword.control",
+        "punctuation.decorator",
+        "meta.decorator entity.name.function",
         "entity.name.function.decorator",
         "keyword.control.at-rule.media",
         "constant.character.entity",

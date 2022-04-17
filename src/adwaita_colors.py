@@ -126,6 +126,8 @@ MAP = {
     'def:preprocessor': [
         'meta.preprocessor',
         'meta.preprocessor keyword.control',  # →#include← <config.h> (override def:keyword)
+        'punctuation.decorator',  # →@<-decorator (in e.g. TypeScript)
+        'meta.decorator entity.name.function',  # @→decorator← (in e.g. TypeScript)
         'entity.name.function.decorator',  # @decorator (in e.g. Python)
         'keyword.control.at-rule.media',  # @at-rule (in e.g. CSS)
         'constant.character.entity',  # &amp;
