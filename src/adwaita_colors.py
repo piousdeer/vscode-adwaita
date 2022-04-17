@@ -56,6 +56,7 @@ MAP = {
     ],
     'def:constant': [
         # 'constant', # applies to CAPS_VARIABLES, which is unwanted
+        'constant.language',
         'support.type.property-name',  # { →"key"←: ... } (in e.g. JSON)
         # Character (e.g. in Rust). Note: there should probably be a separate def:character rule,
         # but Adwaita scheme doesn't include it (and falls back to def:constant).

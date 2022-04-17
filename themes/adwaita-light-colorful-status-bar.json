@@ -131,6 +131,7 @@
     },
     {
       "scope": [
+        "constant.language",
         "support.type.property-name",
         "string.quoted.single.char",
         "support.constant.property-value.css",
