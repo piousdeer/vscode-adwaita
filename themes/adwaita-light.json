@@ -83,7 +83,7 @@
         "keyword.control.flow.block-scalar.folded",
         "storage.modifier.chomping-indicator",
         "storage.type.string",
-        "string.quoted.byte.raw.rust",
+        "string.quoted.byte.raw",
         "meta.macro.rules entity.name.function.macro.rust"
       ],
       "settings": {

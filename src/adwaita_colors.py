@@ -26,7 +26,7 @@ MAP = {
         'storage.modifier.chomping-indicator',
 
         'storage.type.string',  # f, b, r string prefixes (in e.g. Python)
-        'string.quoted.byte.raw.rust',  # b string prefix (in e.g. Rust)
+        'string.quoted.byte.raw',  # b string prefix (in e.g. Rust)
 
         # Rust
         # macro_rules! →hello_world_macro← {
