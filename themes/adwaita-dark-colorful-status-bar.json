@@ -279,6 +279,7 @@
       "scope": [
         "storage.type",
         "entity.name.type",
+        "entity.name.namespace",
         "keyword.type.cs",
         "support.type",
         "support.class.builtin",

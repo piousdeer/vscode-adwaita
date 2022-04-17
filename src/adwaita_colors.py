@@ -152,6 +152,7 @@ MAP = {
         # Type names
         'storage.type',  # when defining a variable of a type
         'entity.name.type',  # when referring to a type
+        'entity.name.namespace',
         # C# uses this instead
         'keyword.type.cs',
         # Built-in types
