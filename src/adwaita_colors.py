@@ -96,12 +96,16 @@ MAP = {
         'keyword.operator.logical.python',  # and, or
         'source.js keyword.operator.expression',  # typeof, instanceof
         'source.ts keyword.operator.expression',
-        # →const← name = ..., →class← Class: ..., →def← fn(): ...
-        'storage.type',
         # →static← void Main(string[] args)
         'storage.modifier',
         # YAML
-        'entity.name.tag.yaml'  # key names
+        'entity.name.tag.yaml',  # key names
+        # Workarounds for extensions that incorrectly mark keywords with `storage.type`
+        # (https://github.com/piousdeer/vscode-adwaita/issues/5)
+        'source.js storage.type',
+        'source.ts storage.type',
+        'source.tsx storage.type',
+        'source.rust storage.type'
     ],
     # 'def:link-destination': [],
     # 'def:link-text': [],
@@ -139,15 +143,15 @@ MAP = {
         'markup.bold.markdown'
     ],
     'def:type': [
-        'support.type',
-        # C#
+        # Type names
+        'storage.type',  # when defining a variable of a type
+        'entity.name.type',  # when referring to a type
+        # C# uses this instead
         'keyword.type.cs',
-        # Go
-        'source.go storage.type',
-        # Rust
-        'entity.name.type',
-        # JS built-in constructors
-        'support.class.builtin.js',
+        # Built-in types
+        'support.type',
+        # Built-in classes (in e.g. JS)
+        'support.class.builtin',
         'support.class.promise'
     ],
     # 'def:underlined': [],

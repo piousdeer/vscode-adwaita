@@ -193,9 +193,12 @@
         "keyword.operator.logical.python",
         "source.js keyword.operator.expression",
         "source.ts keyword.operator.expression",
-        "storage.type",
         "storage.modifier",
-        "entity.name.tag.yaml"
+        "entity.name.tag.yaml",
+        "source.js storage.type",
+        "source.ts storage.type",
+        "source.tsx storage.type",
+        "source.rust storage.type"
       ],
       "settings": {
         "foreground": "#C64600",
@@ -270,11 +273,11 @@
     },
     {
       "scope": [
-        "support.type",
-        "keyword.type.cs",
-        "source.go storage.type",
+        "storage.type",
         "entity.name.type",
-        "support.class.builtin.js",
+        "keyword.type.cs",
+        "support.type",
+        "support.class.builtin",
         "support.class.promise"
       ],
       "settings": {
