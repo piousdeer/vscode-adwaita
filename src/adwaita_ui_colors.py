@@ -34,6 +34,7 @@ def get_adwaita_ui_colors(theme_type, colorful_status_bar=False):
         'editorBracketMatch.border':            '#454545' if dark else '#cfcfcf',
         'editorGroup.border':                   '#454545' if dark else '#cfcfcf',
         'editorGroupHeader.border':             '#454545' if dark else '#cfcfcf',
+        'editorGroupHeader.tabsBorder':         '#454545' if dark else '#cfcfcf',
         'panel.border':                         '#454545' if dark else '#cfcfcf',
         'panelSectionHeader.border':            '#454545' if dark else '#cfcfcf',
         'sideBar.border':                       '#454545' if dark else '#cfcfcf',
