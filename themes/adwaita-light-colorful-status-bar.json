@@ -78,6 +78,7 @@
       "scope": [
         "",
         "meta.embedded",
+        "variable",
         "meta.tag.attributes punctuation.section.embedded",
         "keyword.operator",
         "storage.type.function.arrow",

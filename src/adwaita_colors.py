@@ -18,6 +18,9 @@ MAP = {
 
         # Embedded expressions (e.g. ${→something←} in a string)
         'meta.embedded',
+        # Explicitly default-color variables. A workaround for nix-ide and potentially other
+        # extensions. "${→abc←}" is colored like a string with nix-ide, see: https://github.com/nix-community/vscode-nix-ide/pull/222.
+        'variable',
         # Embedded expression punctuation in XML attributes (e.g. <Component prop=→{←value→}←> in JSX)
         'meta.tag.attributes punctuation.section.embedded',
 
