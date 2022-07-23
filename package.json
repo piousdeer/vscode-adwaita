@@ -68,6 +68,9 @@
 			}
 		]
 	},
+	"scripts": {
+		"build": "cd src && python3 build.py"
+	},
 	"__metadata": {
 		"id": "93fbc635-4a9a-4ff1-88ba-bf017484c602",
 		"publisherDisplayName": null,

@@ -33,7 +33,9 @@ Open Command Palette and find "Open Settings (JSON)". Here are the recommended s
 
 ## Contributing
 
-cd into `src` and run `build.py` to build the JSON files. Open this project in VS Code and hit F5 to test out your changes.
+Requirements: Python 3.
+
+cd into `src` and run `build.py` to build the JSON files (if you have npm, `npm run build` is an alias for that). Open this project in VS Code and hit F5 to test out your changes.
 
 Adwaita syntax highlighting rules are translated from a GtkSourceView style scheme. This is far from perfect, but I've tried to make sure most popular languages look good. If something seems too off, open an issue.
 
