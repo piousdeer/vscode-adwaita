@@ -42,6 +42,7 @@
     "statusBar.foreground": "#ffffff",
     "statusBar.noFolderForeground": "#ffffff",
     "statusBar.debuggingForeground": "#ffffff",
+    "statusBarItem.remoteForeground": "#ffffff",
     "sideBar.foreground": "#cccccc",
     "panelTitle.activeBorder": "#cccccc",
     "panelTitle.activeForeground": "#cccccc",

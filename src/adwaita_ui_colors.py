@@ -60,6 +60,7 @@ def get_adwaita_ui_colors(theme_type, colorful_status_bar=False):
         'statusBar.foreground':                 '#cccccc' if dark else '#323232',
         'statusBar.noFolderForeground':         '#cccccc' if dark else '#323232',
         'statusBar.debuggingForeground':        '#cccccc' if dark else '#323232',
+        'statusBarItem.remoteForeground':       '#cccccc' if dark else '#323232',
         'sideBar.foreground':                   '#cccccc' if dark else '#323232',
         'panelTitle.activeBorder':              '#cccccc' if dark else '#323232',
         'panelTitle.activeForeground':          '#cccccc' if dark else '#323232',
@@ -107,7 +108,8 @@ def get_adwaita_ui_colors(theme_type, colorful_status_bar=False):
             'statusBarItem.remoteBackground':   _('green')(6),
             'statusBar.foreground':             '#ffffff',
             'statusBar.debuggingForeground':    '#ffffff',
-            'statusBar.noFolderForeground':     '#ffffff'
+            'statusBar.noFolderForeground':     '#ffffff',
+            'statusBarItem.remoteForeground':   '#ffffff',
         }
 
     return ui_colors
