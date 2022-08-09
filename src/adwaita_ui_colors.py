@@ -90,6 +90,8 @@ def get_adwaita_ui_colors(theme_type, colorful_status_bar=False):
         'gitDecoration.ignoredResourceForeground':          _('dark')(1),
 
         # Color-picked colors
+        'commandCenter.background':             '#444444' if dark else '#d9d9d9',
+        'commandCenter.border':                 '#00000000',
         'button.hoverBackground':               '#4990e7',
         'focusBorder':                          '#5f7999',
 

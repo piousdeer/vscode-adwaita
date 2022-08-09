@@ -66,6 +66,8 @@
     "gitDecoration.deletedResourceForeground": "#F66151dd",
     "gitDecoration.stageDeletedResourceForeground": "#F66151dd",
     "gitDecoration.ignoredResourceForeground": "#77767B",
+    "commandCenter.background": "#444444",
+    "commandCenter.border": "#00000000",
     "button.hoverBackground": "#4990e7",
     "focusBorder": "#5f7999",
     "activityBar.foreground": "#ffffff",
