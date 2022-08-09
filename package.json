@@ -14,7 +14,9 @@
 	],
 	"keywords": [
 		"gnome",
-		"libadwaita"
+		"libadwaita",
+		"gtk",
+		"gtk4"
 	],
 	"homepage": "https://github.com/piousdeer/vscode-adwaita",
 	"bugs": {
