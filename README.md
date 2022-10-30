@@ -33,6 +33,10 @@ Installing [adw-gtk3](https://github.com/lassekongo83/adw-gtk3) will get you a m
 
 [Rounded Window Corners](https://extensions.gnome.org/extension/5237/rounded-window-corners/) GNOME extension can be used to get rounded corners on all windows.
 
+## Related projects
+
+- [wroyca/vscode-gnome](https://github.com/wroyca/vscode-gnome) contains custom CSS that brings VS Code even closer to looking like a libadwaita app.
+
 ## Contributing
 
 Requirements: Python 3.
