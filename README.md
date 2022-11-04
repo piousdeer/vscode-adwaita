@@ -22,6 +22,7 @@ Open the Command Palette and find "Open Settings (JSON)". Here are the recommend
 "workbench.preferredLightColorTheme": "Adwaita Light",
 "window.titleBarStyle": "native",
 "window.menuBarVisibility": "toggle", // Menu bar will be hidden until you press Alt
+"window.autoDetectColorScheme": true,
 "window.title": "${rootPath}${separator}Code",
 "breadcrumbs.enabled": false,
 "editor.renderLineHighlight": "none",
