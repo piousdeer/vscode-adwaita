@@ -29,8 +29,6 @@ Open the Command Palette and find "Open Settings (JSON)". Here are the recommend
 "workbench.tree.indent": 12,
 ```
 
-Installing [adw-gtk3](https://github.com/lassekongo83/adw-gtk3) will get you a matching native title bar.
-
 [Rounded Window Corners](https://extensions.gnome.org/extension/5237/rounded-window-corners/) GNOME extension can be used to get rounded corners on all windows.
 
 ## Related projects
