@@ -18,13 +18,12 @@ Get it on [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=p
 Open the Command Palette and find "Open Settings (JSON)". Here are the recommended settings:
 
 ```jsonc
+"window.titleBarStyle": "custom",
+"window.commandCenter": true,
+"window.autoDetectColorScheme": true,
 "workbench.preferredDarkColorTheme": "Adwaita Dark",
 "workbench.preferredLightColorTheme": "Adwaita Light",
-"window.titleBarStyle": "native",
-"window.menuBarVisibility": "toggle", // Menu bar will be hidden until you press Alt
-"window.autoDetectColorScheme": true,
-"window.title": "${rootPath}${separator}Code",
-"breadcrumbs.enabled": false,
+"workbench.productIconTheme": "adwaita",
 "editor.renderLineHighlight": "none",
 "workbench.iconTheme": null,
 "workbench.tree.indent": 12,
