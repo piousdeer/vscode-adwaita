@@ -40,11 +40,9 @@ Installing [adw-gtk3](https://github.com/lassekongo83/adw-gtk3) will get you a m
 
 ## Contributing
 
-Requirements: Python 3.
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-cd into `src` and run `build.py` to build the JSON files (if you have npm, `npm run build` is an alias for that). Open this project in VS Code and hit F5 to test out your changes.
-
-Adwaita syntax highlighting rules are translated from a GtkSourceView style scheme. This is far from perfect, but I've tried to make sure most popular languages look good. If something seems too off, open an issue.
+<hr>
 
 This project is not affiliated with GNOME Foundation.
 

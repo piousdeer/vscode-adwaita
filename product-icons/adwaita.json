@@ -1,0 +1,73 @@
+{
+  "fonts": [
+    {
+      "id": "adwaita-icons",
+      "src": [
+        {
+          "path": "./adwaita-icons.ttf",
+          "format": "woff"
+        }
+      ],
+      "weight": "normal",
+      "style": "normal"
+    }
+  ],
+  "iconDefinitions": {
+    "chrome-close": {
+      "fontCharacter": "\\ea01",
+      "fontId": "adwaita-icons"
+    },
+    "chrome-maximize": {
+      "fontCharacter": "\\ea02",
+      "fontId": "adwaita-icons"
+    },
+    "chrome-minimize": {
+      "fontCharacter": "\\ea03",
+      "fontId": "adwaita-icons"
+    },
+    "chrome-restore": {
+      "fontCharacter": "\\ea04",
+      "fontId": "adwaita-icons"
+    },
+    "menubar-more": {
+      "fontCharacter": "\\eb94",
+      "fontId": "adwaita-icons"
+    },
+    "layout-sidebar-left": {
+      "fontCharacter": "\\ea05",
+      "fontId": "adwaita-icons"
+    },
+    "layout-sidebar-left-off": {
+      "fontCharacter": "\\ea06",
+      "fontId": "adwaita-icons"
+    },
+    "layout-panel": {
+      "fontCharacter": "\\ea07",
+      "fontId": "adwaita-icons"
+    },
+    "layout-panel-off": {
+      "fontCharacter": "\\ea08",
+      "fontId": "adwaita-icons"
+    },
+    "layout-sidebar-right": {
+      "fontCharacter": "\\ea09",
+      "fontId": "adwaita-icons"
+    },
+    "layout-sidebar-right-off": {
+      "fontCharacter": "\\ea0a",
+      "fontId": "adwaita-icons"
+    },
+    "layout": {
+      "fontCharacter": "\\ea0b",
+      "fontId": "adwaita-icons"
+    },
+    "arrow-left": {
+      "fontCharacter": "\\ea0c",
+      "fontId": "adwaita-icons"
+    },
+    "arrow-right": {
+      "fontCharacter": "\\ea0d",
+      "fontId": "adwaita-icons"
+    }
+  }
+}
