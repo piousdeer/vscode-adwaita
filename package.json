@@ -79,7 +79,12 @@
   },
   "scripts": {
     "build:color-themes": "cd src && python3 build.py",
-    "build:product-icons": "nanoemoji --color_format glyf_colr_1 --family adwaita-icons --output_file product-icons/adwaita-icons.ttf product-icons/scalable/*.svg"
+    "build:product-icons": "nanoemoji --color_format glyf_colr_1 --family adwaita-icons --output_file product-icons/adwaita-icons.ttf product-icons/scalable/*.svg",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "prettier": {
+    "printWidth": 100
   },
   "__metadata": {
     "id": "93fbc635-4a9a-4ff1-88ba-bf017484c602",
@@ -90,6 +95,7 @@
   "devDependencies": {
     "@gi-types/adw1": "^1.1.1",
     "@gi-types/gjs-environment": "^1.1.0",
-    "@gi-types/gtk4": "^4.6.1"
+    "@gi-types/gtk4": "^4.6.1",
+    "prettier": "^2.8.1"
   }
 }
