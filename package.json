@@ -86,5 +86,10 @@
     "publisherDisplayName": null,
     "publisherId": "93befe42-7314-4d14-8724-19419a27ed64",
     "isPreReleaseVersion": false
+  },
+  "devDependencies": {
+    "@gi-types/adw1": "^1.1.1",
+    "@gi-types/gjs-environment": "^1.1.0",
+    "@gi-types/gtk4": "^4.6.1"
   }
 }
