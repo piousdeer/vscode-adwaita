@@ -33,7 +33,9 @@ Open the Command Palette and find "Open Settings (JSON)". Here are the recommend
 
 ## Related projects
 
-- [wroyca/vscode-gnome](https://github.com/wroyca/vscode-gnome) contains custom CSS that brings VS Code even closer to looking like a libadwaita app.
+- [wroyca/vscode-libadwaita](https://github.com/wroyca/vscode-libadwaita) contains custom CSS that brings VS Code even closer to looking like a libadwaita app:
+
+![libadwaita](https://raw.githubusercontent.com/wroyca/vscode-libadwaita/main/libadwaita.png)
 
 ## Contributing
 
