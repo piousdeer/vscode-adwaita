@@ -44,6 +44,11 @@
         "path": "./themes/adwaita-dark-default-syntax-highlighting.json"
       },
       {
+        "label": "Adwaita Dark & GitHub syntax highlighting",
+        "uiTheme": "vs-dark",
+        "path": "./themes/adwaita-dark-github-syntax-highlighting.json"
+      },
+      {
         "label": "Adwaita Dark & default syntax highlighting & colorful status bar",
         "uiTheme": "vs-dark",
         "path": "./themes/adwaita-dark-default-syntax-highlighting-colorful-status-bar.json"
@@ -62,6 +67,11 @@
         "label": "Adwaita Light & default syntax highlighting",
         "uiTheme": "vs",
         "path": "./themes/adwaita-light-default-syntax-highlighting.json"
+      },
+      {
+        "label": "Adwaita Light & GitHub syntax highlighting",
+        "uiTheme": "vs",
+        "path": "./themes/adwaita-light-github-syntax-highlighting.json"
       },
       {
         "label": "Adwaita Light & default syntax highlighting & colorful status bar",
