@@ -53,8 +53,8 @@
   <color name="green_5"                    value="#26A269"/>
   <color name="green_6"                    value="#1F7F56"/>
   <color name="green_7"                    value="#1C6849"/>
-  <color name="libadwaita-dark"            value="#262626"/>
-  <color name="libadwaita-dark-alt"        value="#303030"/>
+  <color name="libadwaita-dark"            value="#1c1c20"/>
+  <color name="libadwaita-dark-alt"        value="#2d2d31"/>
   <color name="light_1"                    value="#FFFFFF"/>
   <color name="light_2"                    value="#FCFCFC"/>
   <color name="light_3"                    value="#F6F5F4"/>

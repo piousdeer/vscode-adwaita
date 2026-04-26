@@ -6,12 +6,11 @@ Dark and light themes based on GNOME's new Adwaita look and GNOME Builder's synt
 
 Extra theme variants are included for those who prefer a colorful status bar and/or default syntax highlighting:
 
-![Screenshot showing the dark theme with a colorful status bar and default syntax highlighting](assets/screenshot_extra.png)<br>
-<small><center>Fonts shown: JetBrains Mono, SF Pro Text.</center></small>
+![Screenshot showing the dark theme with a colorful status bar and default syntax highlighting](assets/screenshot_extra.png)
 
 ## Installation
 
-Get it on [VS Marketplace](https://marketplace.visualstudio.com/items?itemName=piousdeer.adwaita-theme) or [Open VSX](https://open-vsx.org/extension/piousdeer/adwaita-theme).
+Build manually from `src/build.py` and link to `.vscode/extensions/adwaita-fork` or something.
 
 ## Suggested settings
 
@@ -41,8 +40,4 @@ Open the Command Palette and find "Open Settings (JSON)". Here are the recommend
 
 See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-<hr>
-
 This project is not affiliated with GNOME Foundation.
-
-[<img src="https://img.shields.io/badge/donate-crypto-yellow">](https://pious.dev/donate)
